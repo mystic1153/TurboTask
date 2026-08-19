@@ -4,7 +4,7 @@ import { PlusCircle, X, Save, Calendar, AlignLeft, Flag, CheckCircle } from 'luc
 import { baseControlClasses, priorityStyles, DEFAULT_TASK } from '../assets/dummy';
 import { API_BASE_URL } from "../config/api"
 
-const API_BASE = '${API_BASE_URL}/api/tasks';
+const API_BASE = `${API_BASE_URL}/api/tasks`;
 
 const TaskModel = ({ isOpen, onClose, taskToEdit, onSave, onLogout }) => {
   const [taskData, setTaskData] = useState(DEFAULT_TASK);

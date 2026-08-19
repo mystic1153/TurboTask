@@ -14,7 +14,7 @@ import {
 } from '../assets/dummy'
 
 // API Base
-const API_BASE = "${API_BASE_URL}/api/tasks"
+const API_BASE = `${API_BASE_URL}/api/tasks`
 
 const Dashboard = () => {
   const { tasks, refreshTasks } = useOutletContext()

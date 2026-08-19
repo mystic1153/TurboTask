@@ -9,7 +9,7 @@ import { API_BASE_URL } from "../config/api"
 import { INPUT_WRAPPER, FULL_BUTTON, SECTION_WRAPPER, BACK_BUTTON, DANGER_BTN, personalFields, securityFields } from '../assets/dummy'
 
 // Constants & Dummy Data
-const API_URL = "API_BASE_URL"
+const API_URL = API_BASE_URL
 
 export default function Profile({ setCurrentUser, onLogout }) {
   const [profile, setProfile] = useState({ name: "", email: "" })

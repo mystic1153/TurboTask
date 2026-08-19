@@ -17,7 +17,7 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [rememberMe, setRememberMe] = useState(false)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
-  const url = "API_BASE_URL"
+  const url = API_BASE_URL
 
   // Auto-login
   useEffect(() => {

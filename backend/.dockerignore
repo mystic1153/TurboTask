@@ -1,0 +1,26 @@
+# Exclude dependencies from build context (npm ci installs Linux binaries inside image)
+node_modules/
+
+# Exclude environment secrets & local configs
+.env
+.env.*
+
+# Exclude Git & IDE metadata
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Exclude Logs & Scan Outputs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+trivy*.txt
+
+# Exclude Docker & Documentation
+Dockerfile
+.dockerignore
+README.md

@@ -1,0 +1,26 @@
+# Exclude dependencies and build outputs across monorepo
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Exclude environment secrets & local configs
+.env
+.env.*
+
+# Exclude Git, IDE, and Terraform
+.git/
+.gitignore
+.vscode/
+.idea/
+terraform/
+.terraform/
+*.tfstate*
+
+# Exclude Logs & Security Artifacts
+logs/
+*.log
+trivy*.txt
+dependency-check-report.xml
+.scannerwork/
+.sonar/

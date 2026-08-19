@@ -6,7 +6,7 @@ import { getPriorityColor, getPriorityBadgeColor, TI_CLASSES, MENU_OPTIONS, } fr
 import { CheckCircle2, MoreVertical, Clock, Calendar } from "lucide-react"
 import { API_BASE_URL } from "../config/api"
 
-const API_BASE = "${API_BASE_URL}/api/tasks"
+const API_BASE = `${API_BASE_URL}/api/tasks`
 
 const TaskItem = ({ task, onRefresh, onLogout, showCompleteCheckbox = true }) => {
   const [showMenu, setShowMenu] = useState(false)
