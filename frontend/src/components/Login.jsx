@@ -4,6 +4,7 @@ import { Mail, Lock, Eye, EyeOff, LogIn } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { API_BASE_URL } from "../config/api"
 
 import { INPUTWRAPPER, BUTTONCLASSES } from '../assets/dummy'
 
@@ -16,7 +17,7 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [rememberMe, setRememberMe] = useState(false)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
-  const url = "http://localhost:4000"
+  const url = "API_BASE_URL"
 
   // Auto-login
   useEffect(() => {

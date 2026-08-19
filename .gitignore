@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment Variables & Secrets (CRITICAL: Never commit these!)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+id_rsa
+id_ed25519
+secrets.yaml
+credentials.json
+
+# Production & Build Outputs
+dist/
+dist-ssr/
+build/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Security Scan Reports & Artifacts
+trivyfs.txt
+trivy_*.txt
+dependency-check-report.xml
+.scannerwork/
+.sonar/
+
+# Terraform State Files (IaC)
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+terraform.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

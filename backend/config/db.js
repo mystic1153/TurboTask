@@ -1,6 +1,15 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-    await mongoose.connect('mongodb+srv://yug35287:Yug2153@cluster0.s1y31ht.mongodb.net/taskflow')
-    .then (() => console.log('DB CONNECTED'));
+    try {
+        const mongoURI = process.env.MONGODB_URI;
+        if (!mongoURI) {
+            throw new Error("MONGODB_URI environment variable is not defined");
+        }
+        await mongoose.connect(mongoURI);
+        console.log('MongoDB Connected Successfully');
+    } catch (error) {
+        console.error('MongoDB Connection Error:', error.message);
+        process.exit(1);
+    }
 }

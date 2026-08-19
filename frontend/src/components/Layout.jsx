@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import { Outlet } from 'react-router-dom'
 import axios from 'axios'
 import {Circle, Clock, PlayCircle, TrendingUp, Zap} from 'lucide-react'
+import { API_BASE_URL } from "../config/api"
 
 const Layout = ({ onLogout, user}) => {
 
@@ -19,7 +20,7 @@ const Layout = ({ onLogout, user}) => {
             const token = localStorage.getItem('token')
             if(!token) throw new Error("No auth token found")
 
-            const { data } = await axios.get("http://localhost:4000/api/tasks/gp", {
+            const { data } = await axios.get("${API_BASE_URL}/api/tasks/gp", {
                 headers: { Authorization: `Bearer ${token}`}
             })
 

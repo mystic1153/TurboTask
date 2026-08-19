@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom"
 import { Plus, Filter, Home as HomeIcon, Calendar as CalendarIcon, Flame } from "lucide-react"
 import TaskItem from "../components/TaskItem"
 import TaskModel from "../components/TaskModel"
+import { API_BASE_URL } from "../config/api"
 
 import axios from "axios"
 
@@ -13,7 +14,7 @@ import {
 } from '../assets/dummy'
 
 // API Base
-const API_BASE = "http://localhost:4000/api/tasks"
+const API_BASE = "${API_BASE_URL}/api/tasks"
 
 const Dashboard = () => {
   const { tasks, refreshTasks } = useOutletContext()

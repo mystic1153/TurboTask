@@ -4,8 +4,9 @@ import { Filter, SortDesc, SortAsc, Award, Plus, ListChecks, Clock } from 'lucid
 import TaskItem from '../components/TaskItem';
 import TaskModel from '../components/TaskModel';
 import { layoutClasses } from '../assets/dummy';
+import { API_BASE_URL } from "../config/api";
 
-const API_BASE = 'http://localhost:4000/api/tasks';
+const API_BASE = '${API_BASE_URL}/api/tasks';
 const sortOptions = [
   { id: 'newest', label: 'Newest', icon: <SortDesc className="w-3 h-3" /> },
   { id: 'oldest', label: 'Oldest', icon: <SortAsc className="w-3 h-3" /> },
