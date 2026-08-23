@@ -117,6 +117,12 @@ pipeline {
 
     post {
         always {
+            sh '''
+            docker rmi \
+                ${ECR_BACKEND_REPO}:${BUILD_NUMBER} \
+                ${ECR_FRONTEND_REPO}:${BUILD_NUMBER} \
+                || true
+            '''
             cleanWs()
         }
     }
