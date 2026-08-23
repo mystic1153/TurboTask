@@ -100,7 +100,7 @@ pipeline {
                     git config --global user.name "Jenkins CI"
                     
                     rm -rf turbo-task-gitops
-                    git clone https://${GIT_USER}:${GIT_TOKEN}@github.com/mystic1121/devsecops-eks-pipeline.git
+                    git clone https://${GIT_USER}:${GIT_TOKEN}@github.com/mystic1121/devsecops-eks-pipeline.git turbo-task-gitops
                     cd turbo-task-gitops/k8s
                     
                     sed -i 's|image: .*turbo-task-backend:.*|image: ${ECR_BACKEND_REPO}:${BUILD_NUMBER}|g' backend-deployment.yaml
