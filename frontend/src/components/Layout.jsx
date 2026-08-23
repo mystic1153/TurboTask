@@ -61,6 +61,7 @@ const Layout = ({ onLogout, user}) => {
         }
     }, [tasks])
 
+//Jenkins Pipeline Test Commit
     //STATISTIC CARD (RIGHT SIDE)
     const StatCard = ({title, value, icon}) => (
         <div className=" p-2 sm:p-3 rounded-xl bg-white shadow-sm border border-blue-100 hover:shadow-md transition-all
